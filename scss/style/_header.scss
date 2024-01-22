@@ -1,0 +1,51 @@
+header{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top:0;
+    background-color: $background-color1;
+    padding:  10px 20px;
+    margin-bottom: 25px;
+   
+    & > a{
+        color: #FA6980;
+        font-family: $myfont1;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 20px;
+        font-style: normal;
+        text-align: left;
+    }
+    @include myflex;
+    nav{ max-width: 500px;
+        width: 100%;
+        @media (max-width:$size3){
+            width: 70%;
+        }
+        @media (max-width:$size4){
+            display: none;
+        }
+
+        ul{ width: 100%;
+            @include myflex;
+            li{
+                a{
+                    color: $textcolor1;
+                    font-family: $myfont1;
+                    font-size: 11px;
+                    font-weight: bold;
+                    line-height: 20px;
+                    font-style: normal;
+                    text-align: left
+                }
+            }
+        }
+        
+    }
+    .fa-bars {
+        display: none;
+        @media(max-width:$size4){
+            display: block;
+        }
+    }
+}
