@@ -1,5 +1,12 @@
 .s-1{
     margin-top: 75px;
+    margin-bottom: 60px;
+    @media(max-width:$size1){
+        margin-bottom: 10px;
+    }
+    @media(max-width:$size4){
+        margin-bottom: 50px;
+    }
     .container{
     @extend %mycontainer;
     @media (max-width:$size1){
@@ -39,6 +46,7 @@
                 position: relative;
                 @media(max-width:$size1){
                     width: 30%;
+                    height: 330px;
                 }
                 @media(max-width:$size4){
                     width: 40%;
@@ -151,4 +159,74 @@
 
             }
         }    
+    }
+
+.s-2{
+
+    .container{
+        @extend %mycontainer;
+        @media (max-width:$size1){
+            width: 90%}
+        }
+        h2{
+            font-family: $myfont1;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 20px;
+            font-style: normal;
+            text-align: left;
+            color:$textcolor2;
+            margin-bottom: 40px;
+            @media(max-width:$size3){
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .wrapper{
+                @include myflex;
+                gap: 10px;
+                align-items: self-start;
+                @media(max-width: $size2){
+                    flex-direction: column;
+                    align-items: center;
+                }
+            .left{
+                @include myleftcard;
+                @include myflex2;
+                @media(max-width: $size1){
+                    width: 60%;
+                }
+                @media(max-width: $size2){
+                    width: 100%;
+                }
+                div{
+                    @include mysmall-left;
+                }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        @media(max-width: $size6){
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                        
+                    }
+                
+            }
+            .right{
+                @include myrightcard;
+                @include myflex2;
+                @media(max-width:$size2){
+                    height: 650px;
+                }
+                div{
+                    @include mysmall-right;
+                    
+                }
+                    img{
+                    width: 100%;
+                    height:100%;
+                    }
+            }
+        }
     }

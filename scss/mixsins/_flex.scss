@@ -5,3 +5,10 @@
     justify-content:$justify;
     align-items: $align;
 }
+
+@mixin myflex2($direction:column, $justify:space-between,){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+
+}
