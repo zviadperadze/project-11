@@ -447,6 +447,31 @@ header .fa-bars {
   width: 100%;
   max-height: 430px;
   height: 100%;
+  background-image: url(../images/bridge.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 700px) {
+  .s-2 .wrapper .left div {
+    background-size: cover;
+    background-position: center;
+  }
+}
+.s-2 .wrapper .left div h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  font-style: normal;
+  text-align: left;
+  color: #FFFFFF;
 }
 .s-2 .wrapper .left img {
   width: 100%;
