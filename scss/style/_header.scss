@@ -5,7 +5,8 @@ header{
     top:0;
     background-color: $background-color1;
     padding:  10px 20px;
-    margin-bottom: 25px;
+    z-index: 100;
+    // margin-bottom: 25px;
    
     & > a{
         color: #FA6980;
@@ -19,10 +20,10 @@ header{
     @include myflex;
     nav{ max-width: 500px;
         width: 100%;
-        @media (max-width:$size3){
+        @media (max-width:$size4){
             width: 70%;
         }
-        @media (max-width:$size4){
+        @media (max-width:$size5){
             display: none;
         }
 
@@ -36,7 +37,11 @@ header{
                     font-weight: bold;
                     line-height: 20px;
                     font-style: normal;
-                    text-align: left
+                    text-align: left;
+                    opacity: 0.50;
+                }
+                .active{
+                    opacity: 1;
                 }
             }
         }
@@ -44,8 +49,11 @@ header{
     }
     .fa-bars {
         display: none;
-        @media(max-width:$size4){
+        @media(max-width:$size5){
             display: block;
         }
     }
 }
+
+
+
